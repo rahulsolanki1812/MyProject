@@ -48,13 +48,13 @@ nav > img {
     width : 100%;
 }
 
-.best-burger > div {
+.best-burger .large-text {
     color : white;
     font-size : 70px;
     font-weight : bold;
     padding-top :380px;
 }
-.best-burger >div >div {
+.best-burger .large-text .small-text {
     color : white;
     margin-top :20px;
     font-size :16px;

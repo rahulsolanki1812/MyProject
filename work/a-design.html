@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anchor Design</title>
+        <style>
+            body {
+                width:80%;
+                margin: 0 auto;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                text-align: center;
+                border: 1px solid;
+            }
+            
+            td {
+                height: 30px;
+                border: 1px solid;
+            }
+            tr:nth-child(1) {
+                height: 40px;
+                color: white;
+                background: green;
+            }
+            
+            
+            #a2 {
+                text-decoration:none
+            }
+            #a2:hover {
+                background-color:red;
+                color:white;
+            }
+            
+            
+            #a3 {
+                background-color:red;
+                padding:10px 15px 10px 15px;
+                text-align: center;
+                border:2px solid #red;
+                color:white;
+                text-decoration:none;
+            }
+            #a3:hover {
+                background-color: chocolate;
+            }
+            
+            
+            .pseudo-style {
+                width: 140px;
+                margin:140px auto
+            }
+            
+            .all {
+                background-color:red;
+                padding: 20px;
+                text-decoration: none;
+                color:white;
+                border:1px solid #990000;
+            }
+            .all:hover {
+                background-color:white;
+                color:#990000;                
+            }
+            
+            .all:active {
+                color:black;
+                background-color:brown;
+                margin-top:20px;
+            }
+            .all:visited {
+                background-color:yellow;
+                color:black;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <table>
+            <capion><h1>Different Styling</h1></capion>
+            <tr>
+                <th>S.No.</th>
+                <th>Desc</th>
+                <th>Demo</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Normal</td>
+                <td><a href="#">Home</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Hover</td>
+                <td><a href="#" id="a2">Home</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Button</td>
+                <td><a href="#" id="a3">Home</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </table>
+        
+        <div class="pseudo-style">
+            <a class="all" href="https://nowgadgets.com" target="_blank">Now Gadgets</a>
+        </div>
+        
+
+    </body>
+</html>

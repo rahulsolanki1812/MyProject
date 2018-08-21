@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Using Gradient In Background</title>
+    </head>
+    <style>
+        body {
+            margin: 0 auto;
+            width: 85%;
+        }
+        main {
+            padding: 25px;
+            border: 1px solid;
+            background-color: beige;
+        }
+        .div1 {
+            padding:30px;
+            background: linear-gradient(to right,red,yellow);
+            margin-bottom: 30px;
+            color: white;
+            font-size: 20px;
+            text-shadow: 2px 3px 6px black;
+        }
+        
+        .div2 {
+            padding:30px;
+            background: linear-gradient(180deg,red 15%,yellow 140%);
+            margin-bottom: 30px;
+            color: white;
+            font-size: 20px;
+            text-shadow: 2px 3px 6px black;
+        }
+        .div3 {
+            padding:30px;
+            background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+            margin-bottom: 30px;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        .div4 {
+            padding:30px;
+            background: radial-gradient(red 5%, yellow 2%, green 2%);
+            margin-bottom:30px;
+            color:white;
+            font-size:20px;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <header>
+            <h2>This is how to use gradient in background</h2>
+        </header>
+        <main>
+            <div class="div1">
+                <h3>Background Gradient</h3>
+                <p>The code used to create background gradient is given below:</p>
+                <code>
+                    .div1 {
+                        padding:30px;
+                        background: linear-gradient(to top,red,yellow);
+                    }
+                </code>
+                <br/><br/>
+                <details>
+                    <summary>See Detail</summary>
+                    <ol>
+                        <li>The parameter in linear-gradient(direction,start color,end color);</li>
+                        <li>You can define color percentage to. linear-gradient(dir,color 10%, color 50%);</li>
+                    </ol>
+                    
+                </details>
+            </div>
+            
+            <div class="div2">
+                <h3>Background Gradient</h3>
+                <p>The code used to create background gradient is given below:</p>
+                <code>
+                    .div2 {
+                        padding:30px;
+                        background: linear-gradient(to top,red,yellow);
+                    }
+                </code>
+            </div>
+            <div class="div3">
+                <h3>Background Gradient</h3>
+                <p>The code used to create background gradient is given below:</p>
+                <code>
+                    .div3 {
+                        padding:30px;
+                        background: linear-gradient(to top,red,yellow);
+                    }
+                </code>
+            </div>
+            
+            <div class="div4">
+                <h3>Background Gradient - Radial Gradient</h3>
+                <p>The code used to create background gradient is given below:</p>
+                <code>
+                    
+                </code>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation</title>
+        <style>
+            body {
+                margin: 0 auto;
+                width: 85%;
+                background-color: beige;
+            }
+            
+            .div1, .div2, .div3 {
+                background-color: white;
+                margin-bottom: 10px;
+                padding: 25px;
+            }
+            
+            .div-in {
+                background-color: chocolate;
+                width: 150px;
+                height: 150px;
+                margin: 21px;
+                position: relative;
+            }
+            
+            .div1-in {
+                animation-name: example;
+                animation-duration: 3s;
+                transition: transform 1s;
+            }
+            .div1-in:hover {
+                transform: translateX(330px);
+            }
+            
+            @keyframes example {
+                from {background-color: chocolate;}
+                to { background-color: green;}
+            }
+            
+             .div2-in {
+                animation-name: example1;
+                animation-duration: 8s;
+            }
+            
+            @keyframes example1 {
+                0% {background-color: chocolate;}
+                25% { background-color: red;}
+                50% { background-color: blue;}
+                75% { background-color: yellow;}
+                100% { background-color: green;}
+            }
+            
+            .div3-in {
+                animation-name: example3;
+                animation-duration: 5s;
+                animation-iteration-count: 4;
+                position: relative;
+                animation-direction: reverse;
+            }
+            @keyframes example3 {
+                0% {background-color:green;top:0px;left:0px;}
+                25% {background-color:yellow;top:0px;left:300px;}
+                50% {background-color:red;top:-300px;left:300px;}
+                75% {background-color:cyan;top:-300px;left:0px;}
+                100% {background-color:beige;top:0px;left:0px;}
+            }
+        </style>
+    </head>
+    <body>
+        <header> 
+            <h2>Animation example</h2>
+        </header>
+        <main>
+            
+            <div class="div1">
+                <div class="div-in div1-in"></div>    
+                <details>
+                    <summary>See Details</summary>
+                    <pre>
+                        
+            .div1-in {
+                animation-name: example;
+                animation-duration: 2s;
+            }
+            
+            @keyframes example {
+                from {background-color: chocolate;}
+                to { background-color: red;}
+            }
+                    </pre>
+                </details>
+            </div>
+            
+            <div class="div2">
+                <div class="div-in div2-in"></div>    
+                <details>
+                    <summary>See Details</summary>
+                    <pre>
+                        
+            .div1-in {
+                animation-name: example1;
+                animation-duration: 2s;
+            }
+            
+            @keyframes example1 {
+                0% {background-color: chocolate;}
+                25% { background-color: red;}
+                50% { background-color: blue;}
+                75% { background-color: yellow;}
+                100% { background-color: green;}
+            }
+                    </pre>
+                </details>
+            </div>
+            
+            <div class="div3">
+                <div class="div-in div3-in"></div>    
+                <details>
+                    <summary>See Details</summary>
+                    <pre>
+                        
+            
+                    </pre>
+                </details>
+            </div>
+            
+        </main>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Opacity Using Differnt Methods</title>
+        <style>
+            .div1 {
+                border:1px solid black;
+                margin:30px;
+                padding:25px;
+                background-color: beige;
+            }
+            
+            .div2 {
+                border:1px solid black;
+                margin:30px;
+                padding:25px;
+                background-color: beige;
+                opacity: 0.5;
+            }
+            
+            .div3 {
+                border:1px solid black;
+                margin:30px;
+                padding:25px;
+                background-color: rgba(245,245,220,0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1">
+            <h3>This div is made without using opacity: no opacity applied </h3>
+            <strong>#div2 { background-color: beige; }</strong>
+            <p>Styling a link as a button and taking advantage of the states allows us to make some pretty cool effects. For example, let's create a button with some depth that appears to get pressed when it's active and pop back up when the click is done.</p>
+            <p>Styling a link as a button and taking advantage of the states allows us to make some pretty cool effects. For example, let's create a button with some depth that appears to get pressed when it's active and pop back up when the click is done.</p>
+        </div>
+        
+        
+        <div class="div2">
+            <h3>This div is made using opacity: whole content will be affected due to opacity</h3>
+            <strong>#div2 { opacity: 0.3; }</strong>
+            <p>Styling a link as a button and taking advantage of the states allows us to make some pretty cool effects. For example, let's create a button with some depth that appears to get pressed when it's active and pop back up when the click is done.</p>
+            <p>Styling a link as a button and taking advantage of the states allows us to make some pretty cool effects. For example, let's create a button with some depth that appears to get pressed when it's active and pop back up when the click is done.</p>
+        </div>
+        
+        <div class="div3">
+            <h3>This div is made using RGBA: only background will be affected not content</h3>
+            <strong>#div2 { background-color: rgba(245,245,220,0.3); }</strong>
+            <p>Styling a link as a button and taking advantage of the states allows us to make some pretty cool effects. For example, let's create a button with some depth that appears to get pressed when it's active and pop back up when the click is done.</p>
+            <p>Styling a link as a button and taking advantage of the states allows us to make some pretty cool effects. For example, let's create a button with some depth that appears to get pressed when it's active and pop back up when the click is done.</p>
+        </div>
+    </body>
+</html>

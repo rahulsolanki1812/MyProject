@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Table Using Pseudo CSS</title>
+        <style>
+            .table-data {
+                width: 50%;
+                margin: 0 auto;
+            }
+            td,th {
+                border: 1px solid #ddd;
+                height: 30px;
+            }
+            table {
+/*                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;*/
+                font-family: "Trebuchet MS";
+                width: 100%;
+                border: 1px solid;
+                text-align: center;
+                border-collapse: collapse;
+            }
+            
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+            tr:hover {
+                background-color: gainsboro;
+            }
+            tr:first-child {
+                height: 40px;
+                background-color:green;
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="table-data">
+            <details>
+                <summary> Show Table</summary>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>Sourabh</td>
+                    <td>Jaora</td>
+                    <td>India</td>
+                </tr>
+                <tr>
+                    <td>Piyush</td>
+                    <td>Indore</td>
+                    <td>India</td>
+                </tr>
+                <tr>
+                    <td>Shivam</td>
+                    <td>Indore</td>
+                    <td>India</td>
+                </tr>
+                <tr>
+                    <td>Shubham</td>
+                    <td>Bangalore</td>
+                    <td>India</td>
+                </tr>
+                <tr>
+                    <td>Tarun</td>
+                    <td>Gwalior</td>
+                    <td>India</td>
+                </tr>
+                
+            </table>
+        </details>
+        </div>
+    </body>
+</html>

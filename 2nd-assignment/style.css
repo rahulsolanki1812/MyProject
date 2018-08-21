@@ -64,18 +64,18 @@ nav > img {
 
 
 /* ARTICLE SECTION */
-.article-div {
+.blog-container {
     line-height: 30px;
     margin: 0 auto 20px auto;
     width: 80%;
     
 }
-article {
+.content {
     float : left;
     width :65%;
     
 }
-article > div {
+.content .title {
     font-weight : 600;
     font-size : 30px;
     line-height : 50px;
@@ -84,12 +84,12 @@ article > div {
 .sidebar-title {
     margin-bottom: 50px;
 }
-article > p, aside > p, .sidebar-title {
+.content p, .sidebar p, .sidebar-title {
     color : #666666;
     font-weight : 100;
     font-size : 14px;
 }
-aside {
+.sidebar {
     float : right;
     line-height : 21px;
     width : 23%;
@@ -139,7 +139,7 @@ aside {
 }
 
 .name {
-    color : #666;
+    color : #666666;
     font-weight : 400;
 }
 .description {
@@ -175,10 +175,10 @@ aside {
     width : 325px;
 }
 
-.p-color {
+.product-color {
     color :white;
 }
-.p-container {
+.product-container {
     margin-top :100px;
 }
 
@@ -306,24 +306,24 @@ i {
         margin : 0 20px;
         padding-top : 205px
     }
-    .article-div {
+    .blog-container {
         width : 100%;
     }
     
-    article {
+    .content {
         width : 100%;
         display : block;
         padding : 20px;
     }
     
-    aside {
+    .sidebar {
         float : none;
         width : 87%;
         display : block;
         margin : 0 auto;
     }
     
-    article > h2 {
+    .content .title {
     font-size : 26px;
     line-height : 43px;
     font-weight : 400;
@@ -335,7 +335,7 @@ i {
         padding-bottom : 30px;
     }
     
-    .product {
+    .product { 
         display : block;
         width : 100%;
     }
@@ -350,9 +350,6 @@ i {
     
 }
 
-div: nth-child(3n) {
-    background-color : red;
-}
 
 
 /*  IPHONE /6/7/8 */

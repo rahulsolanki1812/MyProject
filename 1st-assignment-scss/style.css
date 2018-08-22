@@ -116,7 +116,7 @@ footer .head {
   font-size: 20px;
   font-family: fantasy; }
 
-footer .footer3 .f3-col1, footer .footer3 .f3-col2 {
+footer .my-friends .friend-list-1, footer .my-friends .friend-list-2 {
   list-style-image: url(images/external_link.png);
   list-style-type: none;
   display: inline-block;
@@ -126,19 +126,19 @@ footer .footer3 .f3-col1, footer .footer3 .f3-col2 {
 
 footer {
   height: 120px; }
-  footer .footer1 {
+  footer .my-last-tweet {
     display: inline-block;
     float: left;
     width: 33.33%; }
-  footer .footer2 {
+  footer .my-pictures {
     display: inline-block;
     float: left;
     width: 33.33%; }
-  footer .footer3 {
+  footer .my-friends {
     display: inline-block;
     float: left;
     width: 33.33%; }
-    footer .footer3 .f3-col2 {
+    footer .my-friends .friend-list-2 {
       padding-left: 30px; }
 
 /*# sourceMappingURL=style.css.map */

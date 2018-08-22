@@ -162,24 +162,24 @@ footer {
     .head {
         @extend %footer-font;
     }
-    .footer1{
+    .my-last-tweet{
         display: inline-block;
         float: left;
         width: 33.33%;
     }
-    .footer2{
+    .my-pictures{
         display: inline-block;
         float: left;
         width: 33.33%;
     }
-    .footer3{
+    .my-friends{
         display: inline-block;
         float: left;
         width: 33.33%;
-        .f3-col1 {
+        .friend-list-1 {
             @extend %footer-columns;
         }
-        .f3-col2 {
+        .friend-list-2 {
             @extend %footer-columns;
             padding-left : 30px;
         }

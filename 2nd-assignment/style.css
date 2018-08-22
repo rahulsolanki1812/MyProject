@@ -1,0 +1,355 @@
+* {
+    box-sizing : border-box;
+    font-family : sans-serif;
+}
+body {
+    margin :0;
+}
+
+header {
+    float : left;
+    width : 100%;
+}
+nav {
+    margin : 30px auto;
+    padding-left : 20px;
+    text-align : center;
+}
+nav > a {
+    border : 1px solid;
+    color : #b3b3b3;
+    font-size : 13px;
+    letter-spacing : 2px;
+    padding : 15px;
+    text-decoration : none;
+}
+nav >a:hover {
+    color : white;
+}
+nav > img {
+    margin-left : 45px;
+    margin-right : 10px;
+    vertical-align : middle;
+    width : 200px;
+}
+.nav-small-img, .nav-small-bar {
+    display : none;
+}
+
+.best-burger {
+    background-image : url(images/10748497143_97fb288b86_k.jpg),linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.2));
+    background-blend-mode : overlay;
+    background-position : center;
+    background-repeat : no-repeat;
+    background-size : cover;
+    height : 1000px;
+    margin-bottom: 32px;
+    text-align : center;
+    width : 100%;
+}
+
+.best-burger .large-text {
+    color : white;
+    font-size : 70px;
+    font-weight : bold;
+    padding-top :380px;
+}
+.best-burger .large-text .small-text {
+    color : white;
+    margin-top :20px;
+    font-size :16px;
+    letter-spacing : 3px;
+    font-weight : 100;
+}
+
+
+/* ARTICLE SECTION */
+.blog-container {
+    line-height: 30px;
+    margin: 0 auto 20px auto;
+    width: 80%;
+    
+}
+.content {
+    float : left;
+    width :65%;
+    
+}
+.content .title {
+    font-weight : 600;
+    font-size : 30px;
+    line-height : 50px;
+}
+
+.sidebar-title {
+    margin-bottom: 50px;
+}
+.content p, .sidebar p, .sidebar-title {
+    color : #666666;
+    font-weight : 100;
+    font-size : 14px;
+}
+.sidebar {
+    float : right;
+    line-height : 21px;
+    width : 23%;
+    
+}
+
+/* carousel image div section */
+
+.carousel-img {
+    width : 100%;
+    margin-bottom : 60px;
+}
+
+/* PRODUCT MENU CARD WHITE SECTION */
+.white-menu-list {
+    line-height : 25px;
+}
+.product-img {
+    width : 315px;
+    display : block;
+    margin : 0 auto 35px auto;
+}   
+
+
+.product-container {
+    width : 80%;
+    margin : 0 auto;
+    margin-bottom : 65px; 
+}
+.product {
+    display : inline-block;
+    width : 33%;
+    vertical-align : top;
+    padding-bottom : 30px;
+    letter-spacing: 1px;
+    
+}
+.product-category {
+    color : #666666;
+    font-weight : 100;
+    margin-bottom: 35px;
+    text-align : center;
+}
+.info {
+    float : left;
+    width : 85%;
+}
+
+.name {
+    color : #666666;
+    font-weight : 400;
+}
+.description {
+    color :#8c8c8c;
+    font-size :14px;
+    line-height : 18px;
+    font-weight : lighter;
+}
+.price {
+    color :#8c8c8c;
+    float : right;
+    font-weight : 100;
+    width : 15%;
+    
+    
+}
+
+/* BLACK MENU LIST CACADE AREA */
+
+.black-menu-list {
+    background-position : -25px -50px;
+    background-image : url('images/12324630754_04f0a12dfc_mod.jpg');
+    background-repeat : no-repeat;
+    margin-top :100px;
+    height : 1200px;
+    width : 100%;
+}
+
+.black-menu-img {
+    display : block;
+    margin :0 auto;
+    padding-top : 150px;
+    width : 325px;
+}
+
+.product-color {
+    color :white;
+}
+.product-container {
+    margin-top :100px;
+}
+
+
+/******* MAKE A RESERVATION BLOCK SECTION ******/
+.reservation-block {
+    height :435px;
+}
+.reservation-container {
+    margin : 0 auto;
+    padding-top : 100px;
+    text-align : center;
+    width : 45%;
+}
+
+.heading {
+    font-size : 40px;
+    font-weight : bolder;
+    
+}
+.powered-text {
+    margin-top : 15px;
+    margin-bottom : 23px;
+    font-size : 11px;
+    font-weight : 100;
+    color : #333333;
+}
+
+button {
+    background-color :  #404040;
+    color : white;
+    padding :13px 28px;
+    border-radius : 21px;
+    font-size : 13px;
+    letter-spacing : 1px;
+}
+
+.reservation-details {
+    color :  #999999;
+    font-size : 15px;
+    margin-top : 80px;
+    font-weight : 100;
+    line-height : 23px;
+    letter-spacing : 1px;
+}
+
+/* FOOTER SOCIAL ICONS */
+.social-icons {
+    background-color : #1f1f1f;
+    height : 110px;
+    color : white;
+    border-bottom-color : #1f1f1f;
+}
+
+.icons {
+    width : 143px;
+    margin : 0 auto;
+    padding-top : 35px;
+    
+}
+i {
+    border : 2px solid;
+    padding : 8px;
+    margin-right : 10px;
+    border-radius : 25px;
+}
+/* FOOTER ADDRESS DETALS */
+.address-details {
+    background-color : #171717;
+    height : 200px;
+    color : rgba(255,255,255,.8);
+    font-size : 12px;
+    font-weight : 100;
+    letter-spacing : 1px;
+    text-align : center;
+}
+
+.address-text {
+    padding-top : 75px;
+}
+.address-text + div {
+    margin-top : 15px;
+    color : #a6a6a6;
+}
+.copyright > a {
+    color : #a6a6a6; 
+}
+
+@media screen and (max-width : 1277px) {
+    
+    .nav-small-bar, .nav-small-img {
+        display : block;
+    }
+    .nav-small-bar {
+        text-align : center;
+    }
+    .nav-small-img {
+        margin : 30px auto 0px auto;
+        width : 200px;
+    }
+    header {
+        margin-left : 0px;
+    }
+    .nav-large {
+        display : none;
+    }
+    nav {
+        margin : 18px auto 0px auto;
+    }
+    nav a {
+        margin-left : 0;
+        margin-right : 32px;
+    }
+}
+@media screen and (max-width : 411px) {
+    .nav-small-bar {
+        display : none;
+    }
+    .best-burger {
+        background-size : cover;
+        height : 525px;
+    }
+    .best-burger > div {
+        font-size : 30px;
+        margin : 0 20px;
+        padding-top : 205px
+    }
+    .blog-container {
+        width : 100%;
+    }
+    
+    .content {
+        width : 100%;
+        display : block;
+        padding : 20px;
+    }
+    
+    .sidebar {
+        float : none;
+        width : 87%;
+        display : block;
+        margin : 0 auto;
+    }
+    
+    .content .title {
+    font-size : 26px;
+    line-height : 43px;
+    font-weight : 400;
+    }
+    
+    .black-menu-list {
+        background-position : center;
+        height : auto;
+        padding-bottom : 30px;
+    }
+    
+    .product { 
+        display : block;
+        width : 100%;
+    }
+    
+    .reservation-container {
+        width : 100%;
+    }
+    .reservation-block {
+        height : 480px;
+    }
+    
+    
+}
+
+
+
+/*  IPHONE /6/7/8 */

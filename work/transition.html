@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transition Effect</title>
+        <style>
+            body {
+                margin: 0 auto;
+                width: 85%;
+                background-color: beige;
+            }
+            main {
+                padding: 25px;
+            }
+            
+            .div1, .div2, .div3, .div4, .div5, .div6{
+                background-color: white;
+                padding: 25px;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+            }
+            
+            .div1 button {
+                background-color: chocolate;
+                color: white;
+                padding: 15px 40px;
+                border-radius: 0px;
+                box-shadow: 0;
+                transition-property: box-shadow, border-radius, color, background-color;
+                transition-duration: .2s, 1s, .5s, 1s;
+            }
+            .div1 button:hover {
+                background-color: white;
+                border: 1px solid chocolate;
+                border-radius: 30px;
+                box-shadow: 4px 4px 80px black;
+                color: chocolate;
+            }
+            
+            .div2 button {
+                background-color: yellowgreen;
+                color: white;
+                padding: 15px 40px;
+                border-radius: 0px;
+                font-size: 12px;
+                transition-property: font-size, border-radius, color, background-color;
+                transition-duration: 1s;
+                transition-delay: 2s;
+            }
+            .div2 button:hover {
+                border: 1px solid yellowgreen;
+                color: yellowgreen;
+                background-color: white;
+                border-radius: 15px;
+                font-size: 16px;
+            }
+            
+            .div3 button {
+                background-color: saddlebrown;
+                padding: 15px 30px;
+                color: white;
+                transition: transform 2s;
+            }
+            
+            .div3 button:hover {
+                transform: skewY(20deg);
+            }
+
+            .div4-inner1,.div4-inner2,.div4-inner3, .div5-inner1, .div5-inner2, .div6-inner1, .div6-inner2{
+                display: inline-block;
+                width: 50%;
+                margin: 0 auto;
+            }
+            .div4 button, .div5 button, .div6 button{
+                background-color: coral;
+                padding: 15px 30px;
+                color: white;
+                transition: transform 2s ease-in-out ;
+                
+            }
+            
+
+            .div4-inner1 button:hover {
+                transform: scale(2,2);
+            }
+            .div4-inner2 button:hover {
+                transform: scaleX(2);
+            }
+            .div4-inner3 button:hover {
+                transform: scaleY(2);
+            }
+            
+            
+            .div5-inner1 button:hover {
+                transform: rotate(90deg);
+            }
+            .div5-inner2 button:hover {
+                transform: rotate(-90deg);
+            }
+            
+            .div6-inner1 button:hover {
+                transform: translate(200px);
+            }
+            .div6-inner2 button:hover {
+                transform: translateY(-500px);
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>This is how to use Transition Effect in css.</h2>
+        </header>
+        <main>
+            <div class="div1">
+                <h2>Transition On Hover To Change Element Different Properties.</h2>
+                <button>Hello</button>
+                <details>
+                    <summary>See Code here:</summary>
+                    <pre>
+                        .div1 button {
+                            background-color: chocolate;
+                            color: white;
+                            padding: 15px 40px;
+                            border-radius: 0px;
+                            box-shadow: 0;
+                            transition-property: box-shadow, border-radius, color, background-color;
+                            transition-duration: .2s, 1s, .5s, 1s;
+                        }
+                        .div1 button:hover {
+                            background-color: white;
+                            border: 1px solid chocolate;
+                            border-radius: 30px;
+                            box-shadow: 4px 4px 80px black;
+                            color: chocolate;
+                        }
+                    </pre>
+                </details>
+            </div>
+            
+            <div class="div2">
+                <h2>Transition-Delay On Hover</h2>
+                <button type="button">Click Me</button>
+                <details>
+                    <summary>See Code Here</summary>
+                    <pre>
+                         .div2 button {
+                            background-color: yellowgreen;
+                            color: white;
+                            padding: 15px 40px;
+                            border-radius: 0px;
+                            font-size: 12px;
+                            transition-property: font-size, border-radius, color, background-color;
+                            transition-duration: 1s;
+                            transition-delay: 2s;
+                        }
+                        .div2 button:hover {
+                            border: 1px solid yellowgreen;
+                            color: yellowgreen;
+                            background-color: white;
+                            border-radius: 15px;
+                        }
+                    </pre>
+                </details>
+            </div>
+            
+            <div class="div3">
+                <h2>Tilt The Element Using skew() function</h2>
+                <button type="button">Click Me</button>
+                <details>
+                    <summary>See Code Here</summary>
+                    <pre>
+                        .div3 button {
+                            background-color: saddlebrown;
+                            padding: 15px 30px;
+                            color: white;
+                            transition: transform 2s;
+                        }
+
+                        .div3 button:hover {
+                            transform: skewX(20deg);
+                        }
+                         
+                    </pre>
+                </details>
+            </div>
+            
+            <div class="div4">
+                <h2>Scale the element using scale(x,y) function</h2>
+                <p>This takes them number by which width and height gets multiple and according to that size increases. Example: width:100px; and scaleX(2). It will be scaled by 200px; same with the height.</p>
+                <div style="display: flex;width: 100%;">
+                    <div class="div4-inner1">
+                        <p>Scale(x,y)</p>
+                        <button type="button">Click Me</button>
+                        <details>
+                            <summary>See Code Here</summary>
+                            <pre>
+                                .div4-inner1 button:hover {
+                                    transform: scale(2,2);
+                                }
+                            </pre>
+                        </details>
+                    </div>
+                    <div class="div4-inner2">
+                        <p>ScaleX(x)</p>
+                        <button type="button">Click Me</button>
+                        <details>
+                            <summary>See Code Here</summary>
+                            <pre>
+                                .div4-inner2 button:hover {
+                                    transform: scaleX(2);
+                                }
+                            </pre>
+                        </details>
+                    </div>
+                    <div class="div4-inner3">
+                        <p>Scalex(y)</p>
+                        <button type="button">Click Me</button>
+                        <details>
+                            <summary>See Code Here</summary>
+                            <pre>
+                                .div4-inner3 button:hover {
+                                    transform: scaleY(2);
+                                }
+
+                            </pre>
+                        </details>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="div5">
+                <h2>Rotate Using Transform</h2>
+                <div style="display: flex;width: 100%;">
+                    <div class="div5-inner1">
+                        <p>Rotate(90deg) : Clockwise</p>
+                        <button type="button">Click Me</button>
+                        <details>
+                            <summary>See Code Here</summary>
+                            <pre>
+                                .div5-inner1 button:hover {
+                                    transform: rotate(90deg);
+                                }
+                            </pre>
+                        </details>
+                    </div>
+                    <div class="div5-inner2">
+                        <p>Rotate(-90deg) : AntiClockwise</p>
+                        <button type="button">Click Me</button>
+                        <details>
+                            <summary>See Code Here</summary>
+                            <pre>
+                                .div4-inner2 button:hover {
+                                    transform: rotate(-90deg);
+                                }
+                            </pre>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="div6">
+                <h2>Translate Using Transform</h2>
+                <div style="display: flex;width: 100%;">
+                    <div class="div6-inner1">
+                        <p>Translate(500px) : default x</p>
+                        <button type="button">Click Me</button>
+                        <details>
+                            <summary>See Code Here</summary>
+                            <pre>
+            .div6-inner1 button:hover {
+                transform: translate(200px);
+            }
+                            </pre>
+                        </details>
+                    </div>
+                    <div class="div6-inner2">
+                        <p>Translate(-500px)</p>
+                        <button type="button">Click Me</button>
+                        <details>
+                            <summary>See Code Here</summary>
+                            <pre>
+           .div6-inner2 button:hover {
+                transform: translateY(-500px);
+            }
+                            </pre>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

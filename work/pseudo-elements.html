@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pseudo Element Usages</title>
+        <style>
+            body {
+                margin:0 auto;
+                width: 85%;
+            }
+            div {
+                background-color:beige;
+                padding: 35px;
+                border:1px solid;
+                margin-bottom: 30px;
+            }
+            
+            .div1 p::first-letter {
+                font-size: 30px;
+                font-family: cursive;
+                color:red;
+            }
+            
+            .div2 p::first-line {
+                
+                font-family: cursive;
+                color:red;
+            }
+            
+            .div3 p::before {
+                content:"Hello I am Appeded ";
+                color:red;
+            }
+            .div4 p::after {
+                content:" Hello I am Appeded.";
+                color:red;
+            }
+            .div5 p::selection {
+                color:red;
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>Pseudo Element Uses In different Scenerio</h2>
+        </header>
+        <main>
+            <div class="div1">
+                <h3>Styling First Letter Using ::first-letter</h3>
+                <p>Hi, this is first letter styling using pseudo elemets</p>
+                <details>
+                    <summary>Read In Detail:</summary>
+                    <p>The first letter of the above line is made liek this using below code</p>
+                    <code>p::first-letter {
+                        font-size: 30px;
+                        font-family: cursive;
+                        color:red;
+                        }
+                    </code>
+                </details>
+            </div>
+            
+            <div class="div2">
+                <h3>Styling First Line Using ::first-line</h3>
+                <p>Hi, this is first letter styling using pseudo elemets. See here.</p>
+                <details>
+                    <summary>Read In Detail:</summary>
+                    <p>The first line of the above line is made like this using below code</p>
+                    <code>span::first-line {
+                        font-size: 30px;
+                        font-family: cursive;
+                        color:red;
+                        }
+                    </code>
+                </details>
+            </div>
+            
+            <div class="div3">
+                <h3>Adding content before ::before</h3>
+                <p>Hi, this is first letter styling using pseudo elemets. See here.</p>
+                <details>
+                    <summary>Read In Detail:</summary>
+                    <p>The first line of the above line is made like this using below code</p>
+                    <code>.div3 p::before {
+                            content:"Hello I am Appeded ";
+                            color:red;
+                        }
+                    </code>
+                </details>
+            </div>
+            
+            <div class="div4">
+                <h3>Adding content after ::after</h3>
+                <p>Hi, this is first letter styling using pseudo elemets. See here.</p>
+                <details>
+                    <summary>Read In Detail:</summary>
+                    <p>The first line of the above line is made like this using below code</p>
+                    <code>.div3 p::after {
+                            content:"Hello I am Appeded ";
+                            color:red;
+                        }
+                    </code>
+                </details>
+            </div>
+            
+            <div class="div5">
+                <h3>Select &amp; see selection color has changed</h3>
+                <p>select me and see the color effect has changed on selection.</p>
+                <details>
+                    <summary>Read In Detail:</summary>
+                    <p>The first line of the above line is made like this using below code</p>
+                    <code>.div5 p::selection {
+                            color:red;
+                            background-color: blue;
+                        }
+                    </code>
+                </details>
+            </div>
+        </main>
+    </body>
+</html>

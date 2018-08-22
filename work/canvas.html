@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5 CANVAS</title>
+        <style>
+            canvas {
+                border:1px solid;
+            }
+        </style>
+        
+    </head>
+    <body>
+        
+        <header>
+            <h1>This is HTML Canvas</h1>
+        </header>
+        <main>
+            <canvas id="myCanvas" width="500px" height="500px"></canvas>
+        </main>
+        <script>
+            var c=document.getElementById('myCanvas');
+            var ctx=c.getContext("2d");
+            ctx.beginPath();
+            /* Draw Circle */
+            ctx.arc(220,150,100,110,0,true);
+            
+            /* Draw line from orgin (0,0) to end (500,500) point. */
+            ctx.moveTo(0,0);
+            ctx.lineTo(500,500);
+            
+            /*Draw line from right top to left bottom */
+            ctx.moveTo(500,0);
+            ctx.lineTo(0,500);
+           
+            ctx.font="32px Fantasy";
+            ctx.fillText("Rahul",100,300,200);
+            ctx.strokeText("Hello",220,250);
+            ctx.stroke();
+        </script>
+    </body>
+</html>

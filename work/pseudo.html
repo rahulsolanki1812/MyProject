@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pseudo Classes &amp; Selector</title>
+        <style>
+            body {
+                width: 80%;
+                margin: 20px auto;
+            }
+            li:first-child {
+                background-color: red;
+                color:white;
+            }
+            p:last-child {
+                background-color: yellow;
+                color: red;
+            }
+            
+            p:nth-child(5n+1) {
+                background-color: green;
+                color: white;
+            }
+            
+            p:nth-child(2n+1) {
+                color:red;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <h3>Pseudo Classes &amp; Selector Example</h3>
+        </header>
+        <main>
+            <p>abc</p>
+            <p>def</p>
+            <p>ghi</p>
+            <p>jkl</p>
+            <p>mno</p>
+            <p>prq</p>
+            <p>stu</p>
+            <p>abc</p>
+            <p>def</p>
+            <p>ghi</p>
+            <p>jkl</p>
+            <p>mno</p>
+            <p>prq</p>
+            <p>stu</p>
+        </main>
+    </body>
+</html>

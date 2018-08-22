@@ -1,0 +1,191 @@
+@font-face {
+    font-family : "header-font";
+    src : url('fonts/ballpark.ttf');
+}
+$margin : 0 auto;
+body {
+    background-color:#fef8d7;
+    margin: $margin;
+    width: 95%;
+}
+header {
+    
+    border-bottom: 3px solid transparent;
+    border-image: url(images/line.png) 30 round;
+    
+    .logo {
+        font-family: header-font;
+        font-size : 38px;
+        height : 90px;
+    }
+    .header-menu {
+        margin-bottom : 12px;
+        font-family: fantasy;
+        font-size : 18px;
+        
+        .menu {
+            float: right;
+            list-style-type: none;
+            margin:0;
+            font-size:25px;
+            padding:0;
+            
+            li {
+                display: inline;
+                margin-right: 14px;
+            }
+        }
+    }
+}
+
+/* SECTION BLOCK */
+section {
+    background-image: url(images/sanfrancisco.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    height: 220px;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    
+    p {
+        margin-left: 12px;
+        display: inline-block;
+        position: relative;
+    }
+    button {
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 20%;
+        color: white;
+        border: 1px solid #700900;
+        padding: 8px;
+        background: linear-gradient(to top,#700900 63%,white 116%);
+        box-shadow: 0px 0px 2px #761106;
+        border-radius: 5px;
+    }
+    .section-block {
+        background-color: rgba(0,0,0,0.5);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        bottom: 0;
+        color: white;
+        position: absolute;
+        width: 100%;
+        height: 50px;
+    }
+}
+
+main {
+    border-image: url(images/line.png) 30 round;
+    border-bottom:3px solid transparent;
+    width: 100%;
+    margin-top: 25px;
+    
+    article {
+        width: 70%;
+        margin-right: 2%;
+        display: inline-block;
+        
+        .article-header {
+            display: inline;
+            img {
+                vertical-align: middle;
+            }
+            .heading {
+                font-size: 22px;
+            }
+        }
+        p {
+            text-align: justify;
+            line-height: 25px;
+        }
+    }
+    
+    aside {
+        background-color: #6f6b62;
+        width: 24%;
+        float:right;
+        display: inline-block;
+        margin:0 auto;
+        padding:15px;
+        color:white;
+        border-radius: 15px;
+        text-align: justify;
+        line-height: 25px;
+        position: relative;
+        
+        .aside-icon {
+            position: absolute;
+            top:77px;
+            left: -11px;
+        }
+        .zozor-logo {
+            display: block;
+            margin:0 auto;
+            border:1px solid;
+        }
+        .social {
+            width:226px;
+            position: relative;
+            left:50%;
+            margin-left:-113px;
+        }
+    }
+}
+.bottom-ico {
+    display: block;
+    width: 54px;
+    margin: 0 auto;
+}
+%footer-font {
+    font-size: 20px;
+    font-family: fantasy;
+    
+}
+
+%footer-columns {
+    list-style-image: url(images/external_link.png);
+    list-style-type: none;
+    display: inline-block;
+    margin:0;
+    padding-left:0;
+    color:#862f23;
+}
+
+footer {
+    height: 120px;
+    
+    .head {
+        @extend %footer-font;
+    }
+    .footer1{
+        display: inline-block;
+        float: left;
+        width: 33.33%;
+    }
+    .footer2{
+        display: inline-block;
+        float: left;
+        width: 33.33%;
+    }
+    .footer3{
+        display: inline-block;
+        float: left;
+        width: 33.33%;
+        .f3-col1 {
+            @extend %footer-columns;
+        }
+        .f3-col2 {
+            @extend %footer-columns;
+            padding-left : 30px;
+        }
+    }
+}
+
+
+
+

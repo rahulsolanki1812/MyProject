@@ -147,7 +147,7 @@ main {
     
 }
 
-%footer-columns {
+%footer-column {
     list-style-image: url(images/external_link.png);
     list-style-type: none;
     display: inline-block;
@@ -177,10 +177,10 @@ footer {
         float: left;
         width: 33.33%;
         .friend-list-1 {
-            @extend %footer-columns;
+            @extend %footer-column;
         }
         .friend-list-2 {
-            @extend %footer-columns;
+            @extend %footer-column;
             padding-left : 30px;
         }
     }

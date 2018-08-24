@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Combinators</title>
+        <style>
+            body {
+                margin: 0 auto;
+                width: 85%;
+            }
+            main {
+                background-color: beige;
+                border:1px solid;
+                padding:35px;
+            }
+            
+            div ~ p {
+                background-color: darkgrey;
+            }
+            
+            div > p {
+                color: red;
+            }
+            
+            
+            
+            div + p {
+                color: yellow;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>This is example for CSS Combinator</h2>
+        </header>
+        <main>
+            
+            <div class="">
+                <p>Hello</p>
+                <p>Hello</p>
+                --div start
+                <div>
+                    <p>Hello</p>
+                </div>
+                div -- end
+                <p>Hello 
+                    <i>Rahul</i>
+                </p>
+                <p>Hello</p>
+                <p>Hello</p>
+                --div start
+                <div>
+                    <p>Hello</p>
+                </div>
+                div -- end
+                <p>Hello</p>
+                <p>Hello</p>
+                
+            </div>
+            
+            <details>
+                <summary>See Details About What Happening Above</summary>
+                <p><code>div ~ p {
+                    background-color: darkgrey;
+                    }<br/>
+                    this is changing color of those divs which are occuring just below the selector which is div. <br/><br/>
+                    
+
+                    div > p {
+                        color: red;
+                    }<br/>
+                    this change the color of paragraph elements which are direct child of divs. <br/><br/>
+
+
+                    div + p {
+                        color: yellow;
+                    }<br/>
+                    
+                    this change the color of those paragraph tag which occurs just after the div end tag.<br/><br/>
+                    
+                </code></p>
+            </details>
+        </main>
+    </body>
+</html>

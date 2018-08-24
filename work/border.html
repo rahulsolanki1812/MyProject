@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Border Uses</title>
+        <style>
+            body {
+                margin: 0 auto;
+                width: 85%;
+                background-color:beige;
+            }
+            main {
+                height: 500px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 4px 3px 75px 1px black;
+            }
+            p{
+                border: 5px solid;
+                border-image: url(border.png) 36% stretch;
+                padding: 20px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>This is how border is applied</h2>
+        </header>
+        <main>
+            <div class="div1">
+                <p>Hey, this is border image</p>
+            </div>
+        </main>
+    </body>
+</html>

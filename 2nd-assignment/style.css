@@ -1,421 +1,347 @@
 * {
-  box-sizing: border-box;
-  font-family: sans-serif;
+    box-sizing : border-box;
+    font-family : sans-serif;
 }
 body {
-  margin: 0;
+    margin :0;
 }
-.nav {
-  margin: 30px auto;
-  padding-left: 20px;
-  text-align: center;
-}
-.nav a {
-  border: 1px solid;
-  color: #b3b3b3;
-  font-size: 13px;
-  letter-spacing: 2px;
-  padding: 15px;
-  text-decoration: none;
-}
-@media (max-width: 1277px) {
-  .nav a {
-    margin-left: 0;
-    margin-right: 32px;
-  }
-}
-.nav a:hover {
-  color: white;
-}
-.nav img {
-  margin-left: 45px;
-  margin-right: 10px;
-  vertical-align: middle;
-  width: 200px;
-}
+
 header {
-  float: left;
-  width: 100%;
+    float : left;
+    width : 100%;
 }
-@media (max-width: 1277px) {
-  header {
-    margin-left: 0px;
-  }
+nav {
+    margin : 30px auto;
+    padding-left : 20px;
+    text-align : center;
 }
-header .nav-large {
-  margin: 30px auto;
-  padding-left: 20px;
-  text-align: center;
+nav > a {
+    border : 1px solid;
+    color : #b3b3b3;
+    font-size : 13px;
+    letter-spacing : 2px;
+    padding : 15px;
+    text-decoration : none;
 }
-@media (max-width: 1277px) {
-  header .nav-large {
-    display: none;
-  }
+nav >a:hover {
+    color : white;
 }
-header .nav-large a {
-  border: 1px solid;
-  color: #b3b3b3;
-  font-size: 13px;
-  letter-spacing: 2px;
-  padding: 15px;
-  text-decoration: none;
+nav > img {
+    margin-left : 45px;
+    margin-right : 10px;
+    vertical-align : middle;
+    width : 200px;
 }
-@media (max-width: 1277px) {
-  header .nav-large a {
-    margin-left: 0;
-    margin-right: 32px;
-  }
+.nav-small-img, .nav-small-bar {
+    display : none;
 }
-header .nav-large a:hover {
-  color: white;
-}
-header .nav-large img {
-  margin-left: 45px;
-  margin-right: 10px;
-  vertical-align: middle;
-  width: 200px;
-}
-header .nav-small-bar {
-  margin: 30px auto;
-  padding-left: 20px;
-  text-align: center;
-  display: none;
-}
-header .nav-small-bar a {
-  border: 1px solid;
-  color: #b3b3b3;
-  font-size: 13px;
-  letter-spacing: 2px;
-  padding: 15px;
-  text-decoration: none;
-}
-@media (max-width: 1277px) {
-  header .nav-small-bar a {
-    margin-left: 0;
-    margin-right: 32px;
-  }
-}
-header .nav-small-bar a:hover {
-  color: white;
-}
-header .nav-small-bar img {
-  margin-left: 45px;
-  margin-right: 10px;
-  vertical-align: middle;
-  width: 200px;
-}
-@media (max-width: 1277px) {
-  header .nav-small-bar {
-    display: block;
-    text-align: center;
-  }
-}
-@media (max-width: 411px) {
-  header .nav-small-bar {
-    display: none;
-  }
-}
-header .nav-small-img {
-  display: none;
-}
-@media (max-width: 1277px) {
-  header .nav-small-img {
-    display: block;
-    margin: 30px auto 0px auto;
-    width: 200px;
-  }
-}
+
 .best-burger {
-  background-image: url(images/10748497143_97fb288b86_k.jpg), linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
-  background-blend-mode: overlay;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 1000px;
-  margin-bottom: 32px;
-  text-align: center;
-  width: 100%;
+    background-image : url(images/10748497143_97fb288b86_k.jpg),linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.2));
+    background-blend-mode : overlay;
+    background-position : center;
+    background-repeat : no-repeat;
+    background-size : cover;
+    height : 1000px;
+    margin-bottom: 32px;
+    text-align : center;
+    width : 100%;
 }
-@media (max-width: 411px) {
-  .best-burger {
-    background-size: cover;
-    height: 525px;
-  }
-}
+
 .best-burger .large-text {
-  color: white;
-  font-size: 70px;
-  font-weight: bold;
-  padding-top: 380px;
-}
-@media (max-width: 411px) {
-  .best-burger .large-text {
-    font-size: 30px;
-    margin: 0 20px;
-    padding-top: 205px;
-  }
+    color : white;
+    font-size : 70px;
+    font-weight : bold;
+    padding-top :380px;
 }
 .best-burger .large-text .small-text {
-  margin-top: 20px;
-  font-size: 16px;
-  letter-spacing: 3px;
-  font-weight: 100;
+    color : white;
+    margin-top :20px;
+    font-size :16px;
+    letter-spacing : 3px;
+    font-weight : 100;
 }
+
+
+/* ARTICLE SECTION */
 .blog-container {
-  line-height: 30px;
-  margin: 0 auto 20px auto;
-  width: 80%;
+    line-height: 30px;
+    margin: 0 auto 20px auto;
+    width: 80%;
+
 }
-@media (max-width: 411px) {
-  .blog-container {
-    width: 100%;
-  }
+.content {
+    float : left;
+    width :65%;
+
 }
-.blog-container .content {
-  float: left;
-  width: 65%;
+.content .title {
+    font-weight : 600;
+    font-size : 30px;
+    line-height : 50px;
 }
-@media (max-width: 411px) {
-  .blog-container .content {
-    width: 100%;
-    display: block;
-    padding: 20px;
-  }
+
+.sidebar-title {
+    margin-bottom: 50px;
 }
-.blog-container .content .title {
-  font-size: 26px;
-  line-height: 43px;
-  font-weight: 400;
+.content p, .sidebar p, .sidebar-title {
+    color : #666666;
+    font-weight : 100;
+    font-size : 14px;
 }
-@media (max-width: 411px) {
-  .blog-container .content .title {
-    font-size: 26px;
-    line-height: 43px;
-    font-weight: 400;
-  }
+.sidebar {
+    float : right;
+    line-height : 21px;
+    width : 23%;
+
 }
-.blog-container .content p {
-  color: #666666;
-  font-weight: 100;
-  font-size: 14px;
-}
-.blog-container .sidebar {
-  float: right;
-  line-height: 21px;
-  width: 23%;
-}
-@media (max-width: 411px) {
-  .blog-container .sidebar {
-    float: none;
-    width: 87%;
-    display: block;
-    margin: 0 auto;
-  }
-}
-.blog-container .sidebar .sidebar-title {
-  color: #666666;
-  font-weight: 100;
-  font-size: 14px;
-  margin-bottom: 50px;
-}
-.blog-container .sidebar p {
-  color: #666666;
-  font-weight: 100;
-  font-size: 14px;
-}
+
+/* carousel image div section */
+
 .carousel-img {
-  width: 100%;
-  margin-bottom: 60px;
+    width : 100%;
+    margin-bottom : 60px;
 }
-/** product code **/
-.product-container {
-  width: 80%;
-  margin: 0 auto;
-  margin-bottom: 65px;
-}
+
+/* PRODUCT MENU CARD WHITE SECTION */
 .white-menu-list {
-  line-height: 25px;
+    line-height : 25px;
 }
-.white-menu-list .product-img {
-  width: 315px;
-  display: block;
-  margin: 0 auto 35px auto;
+.product-img {
+    width : 315px;
+    display : block;
+    margin : 0 auto 35px auto;
 }
-.white-menu-list .product-category {
-  color: #666666;
-  font-weight: 100;
-  margin-bottom: 35px;
-  text-align: center;
+
+
+.product-container {
+    width : 80%;
+    margin : 0 auto;
+    margin-bottom : 65px;
 }
-.white-menu-list .product {
-  display: inline-block;
-  width: 33%;
-  vertical-align: top;
-  padding-bottom: 30px;
-  letter-spacing: 1px;
+.product {
+    display : inline-block;
+    width : 33%;
+    vertical-align : top;
+    padding-bottom : 30px;
+    letter-spacing: 1px;
 }
-@media (max-width: 411px) {
-  .white-menu-list .product {
-    width: 100%;
-    padding-bottom: 30px;
-  }
+.product-category {
+    color : #666666;
+    font-weight : 100;
+    margin-bottom: 35px;
+    text-align : center;
 }
-.white-menu-list .product .info {
-  float: left;
-  width: 85%;
+.info {
+    float : left;
+    width : 85%;
 }
-.white-menu-list .product .info .name {
-  color: #666666;
-  font-weight: 400;
+
+.name {
+    color : #666666;
+    font-weight : 400;
 }
-.white-menu-list .product .info .description {
-  color: #8c8c8c;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: lighter;
+.description {
+    color :#8c8c8c;
+    font-size :14px;
+    line-height : 18px;
+    font-weight : lighter;
 }
-.white-menu-list .product .price {
-  color: #8c8c8c;
-  float: right;
-  font-weight: 100;
-  width: 15%;
+.price {
+    color :#8c8c8c;
+    float : right;
+    font-weight : 100;
+    width : 15%;
 }
+
+/* BLACK MENU LIST CACADE AREA */
+
 .black-menu-list {
-  background-position: -25px -50px;
-  background-image: url('images/12324630754_04f0a12dfc_mod.jpg');
-  background-repeat: no-repeat;
-  margin-top: 100px;
-  height: 1200px;
-  width: 100%;
+    background-position : -25px -50px;
+    background-image : url('images/12324630754_04f0a12dfc_mod.jpg');
+    background-repeat : no-repeat;
+    margin-top :100px;
+    height : 1200px;
+    width : 100%;
 }
-@media (max-width: 411px) {
-  .black-menu-list {
-    background-position: center;
-    height: auto;
-    padding-bottom: 30px;
-  }
+
+.black-menu-img {
+    display : block;
+    margin :0 auto;
+    padding-top : 150px;
+    width : 325px;
 }
-.black-menu-list .black-menu-img {
-  display: block;
-  margin: 0 auto;
-  padding-top: 150px;
-  width: 325px;
+
+.product-color {
+    color :white;
 }
-.black-menu-list .product-container {
-  margin-top: 100px;
+.product-container {
+    margin-top :100px;
 }
-.black-menu-list .product {
-  display: inline-block;
-  width: 33%;
-  vertical-align: top;
-  padding-bottom: 30px;
-  letter-spacing: 1px;
-}
-@media (max-width: 411px) {
-  .black-menu-list .product {
-    width: 100%;
-    padding-bottom: 30px;
-  }
-}
-.black-menu-list .product .info {
-  float: left;
-  width: 85%;
-}
-.black-menu-list .product .info .name {
-  color: white;
-  font-weight: 400;
-}
-.black-menu-list .product .info .description {
-  color: #8c8c8c;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: lighter;
-}
-.black-menu-list .product .price {
-  color: #8c8c8c;
-  float: right;
-  font-weight: 100;
-  width: 15%;
-}
+
+
+/******* MAKE A RESERVATION BLOCK SECTION ******/
 .reservation-block {
-  height: 435px;
+    height :435px;
 }
-@media (max-width: 411px) {
-  .reservation-block {
-    height: 480px;
-  }
+.reservation-container {
+    margin : 0 auto;
+    padding-top : 100px;
+    text-align : center;
+    width : 45%;
 }
-.reservation-block .reservation-container {
-  margin: 0 auto;
-  padding-top: 100px;
-  text-align: center;
-  width: 45%;
+
+.heading {
+    font-size : 40px;
+    font-weight : bolder;
+
 }
-@media (max-width: 411px) {
-  .reservation-block .reservation-container {
-    width: 100%;
-  }
+.powered-text {
+    margin-top : 15px;
+    margin-bottom : 23px;
+    font-size : 11px;
+    font-weight : 100;
+    color : #333333;
 }
-.reservation-block .reservation-container .heading {
-  font-size: 40px;
-  font-weight: bolder;
+
+button {
+    background-color :  #404040;
+    color : white;
+    padding :13px 28px;
+    border-radius : 21px;
+    font-size : 13px;
+    letter-spacing : 1px;
 }
-.reservation-block .reservation-container .powered-text {
-  margin-top: 15px;
-  margin-bottom: 23px;
-  font-size: 11px;
-  font-weight: 100;
-  color: #333333;
+
+.reservation-details {
+    color :  #999999;
+    font-size : 15px;
+    margin-top : 80px;
+    font-weight : 100;
+    line-height : 23px;
+    letter-spacing : 1px;
 }
-.reservation-block .reservation-container button {
-  background-color: #404040;
-  color: white;
-  padding: 13px 28px;
-  border-radius: 21px;
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-.reservation-block .reservation-container .reservation-details {
-  color: #999999;
-  font-size: 15px;
-  margin-top: 80px;
-  font-weight: 100;
-  line-height: 23px;
-  letter-spacing: 1px;
-}
+
+/* FOOTER SOCIAL ICONS */
 .social-icons {
-  background-color: #1f1f1f;
-  height: 110px;
-  color: white;
-  border-bottom-color: #1f1f1f;
+    background-color : #1f1f1f;
+    height : 110px;
+    color : white;
+    border-bottom-color : #1f1f1f;
 }
-.social-icons .icons {
-  width: 143px;
-  margin: 0 auto;
-  padding-top: 35px;
+
+.icons {
+    width : 143px;
+    margin : 0 auto;
+    padding-top : 35px;
 }
-.social-icons .icons i {
-  border: 2px solid;
-  padding: 8px;
-  margin-right: 10px;
-  border-radius: 25px;
+i {
+    border : 2px solid;
+    padding : 8px;
+    margin-right : 10px;
+    border-radius : 25px;
 }
+/* FOOTER ADDRESS DETALS */
 .address-details {
-  background-color: #171717;
-  height: 200px;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 12px;
-  font-weight: 100;
-  letter-spacing: 1px;
-  text-align: center;
+    background-color : #171717;
+    height : 200px;
+    color : rgba(255,255,255,.8);
+    font-size : 12px;
+    font-weight : 100;
+    letter-spacing : 1px;
+    text-align : center;
 }
-.address-details .address-text {
-  padding-top: 75px;
+
+.address-text {
+    padding-top : 75px;
 }
-.address-details .copyright {
-  margin-top: 15px;
-  color: #a6a6a6;
+.address-text + div {
+    margin-top : 15px;
+    color : #a6a6a6;
 }
-.address-details .copyright a {
-  color: #a6a6a6;
+.copyright > a {
+    color : #a6a6a6;
+}
+
+@media screen and (max-width : 1277px) {
+
+    .nav-small-bar, .nav-small-img {
+        display : block;
+    }
+    .nav-small-bar {
+        text-align : center;
+    }
+    .nav-small-img {
+        margin : 30px auto 0px auto;
+        width : 200px;
+    }
+    header {
+        margin-left : 0px;
+    }
+    .nav-large {
+        display : none;
+    }
+    nav {
+        margin : 18px auto 0px auto;
+    }
+    nav a {
+        margin-left : 0;
+        margin-right : 32px;
+    }
+}
+@media screen and (max-width : 411px) {
+    .nav-small-bar {
+        display : none;
+    }
+    .best-burger {
+        background-size : cover;
+        height : 525px;
+    }
+    .best-burger > div {
+        font-size : 30px;
+        margin : 0 20px;
+        padding-top : 205px
+    }
+    .blog-container {
+        width : 100%;
+    }
+
+    .content {
+        width : 100%;
+        display : block;
+        padding : 20px;
+    }
+
+    .sidebar {
+        float : none;
+        width : 87%;
+        display : block;
+        margin : 0 auto;
+    }
+
+    .content .title {
+    font-size : 26px;
+    line-height : 43px;
+    font-weight : 400;
+    }
+
+    .black-menu-list {
+        background-position : center;
+        height : auto;
+        padding-bottom : 30px;
+    }
+
+    .product {
+        display : block;
+        width : 100%;
+    }
+
+    .reservation-container {
+        width : 100%;
+    }
+    .reservation-block {
+        height : 480px;
+    }
+
+
 }

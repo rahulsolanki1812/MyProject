@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays Methods &amp; Practice</title>
+    <style>
+      body {
+        background-color : beige;
+        margin : 0 auto;
+        padding : 25px;
+        width : 85%;
+      }
+      main {
+        background-color : white;
+        padding : 25px;
+      }
+      table {
+        border : 1px solid;
+        font-family: fantasy;
+        margin : 0 auto;
+        text-align: center;
+        width : 75%;
+      }
+      th {
+        background-color : green;
+        color : white;
+        padding : 10px;
+      }
+      tr:nth-child(even) {
+        background-color : lightgray;
+      }
+      tr:hover {
+        background-color : grey;
+        color : white;
+      }
+      td {
+        padding : 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h2>Table Generated Using Array</h2></header>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          
+        </tbody>
+      </table>
+      
+      <script>
+        var sourceData1 = [ {id: 1, name: "piyush"},
+                            {id: 2, name: "sourabh"},
+                            {id: 3, name: "shivam"},
+                            {id: 4, name: "rohit"},
+                            {id: 14, name: "rohit"}];
+        var sourceData2 = [ {id: 4, age: 21},
+                            {id: 3, age: 33},
+                            {id: 2, age: 12},
+                            {id: 1, age: 23}, 
+                            {id: 5, age: 24},
+                            {id: 11, age: 23}, 
+                            {id: 51, age: 24}
+                   
+                   ];
+                   
+        
+        var destinationData = [];
+        for(var i = 0; i < sourceData1.length; i++) {
+            for(var j=0; j < sourceData2.length; j++) {
+                if(sourceData1[i].id == sourceData2[j].id) {
+                    destinationData.push( {id: sourceData1[i].id, name: sourceData1[i].name, age: sourceData2[j].age});
+                    sourceData2.splice(j, 1);
+                } 
+            }
+        }
+        console.log(sourceData2);
+        console.log(destinationData);
+        destinationData = destinationData.concat(sourceData2);
+        console.log("destinationData array after change");
+        console.log(destinationData);
+        
+        var data= "";
+        for(var i=0; i < destinationData.length; i++)
+          {
+            data+=
+              "<tr>"+
+                "<td>"+destinationData[i].id+"</td>"+
+                "<td>"+destinationData[i].name+"</td>"+
+                "<td>"+destinationData[i].age+"</td>"+
+              "</tr>";
+          }
+        document.getElementById('tbody').innerHTML= data;
+      </script>
+    </main>
+  </body>
+</html>

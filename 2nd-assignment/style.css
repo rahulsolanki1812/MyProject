@@ -68,12 +68,12 @@ nav > img {
     line-height: 30px;
     margin: 0 auto 20px auto;
     width: 80%;
-    
+
 }
 .content {
     float : left;
     width :65%;
-    
+
 }
 .content .title {
     font-weight : 600;
@@ -93,7 +93,7 @@ nav > img {
     float : right;
     line-height : 21px;
     width : 23%;
-    
+
 }
 
 /* carousel image div section */
@@ -111,13 +111,13 @@ nav > img {
     width : 315px;
     display : block;
     margin : 0 auto 35px auto;
-}   
+}
 
 
 .product-container {
     width : 80%;
     margin : 0 auto;
-    margin-bottom : 65px; 
+    margin-bottom : 65px;
 }
 .product {
     display : inline-block;
@@ -125,7 +125,6 @@ nav > img {
     vertical-align : top;
     padding-bottom : 30px;
     letter-spacing: 1px;
-    
 }
 .product-category {
     color : #666666;
@@ -153,8 +152,6 @@ nav > img {
     float : right;
     font-weight : 100;
     width : 15%;
-    
-    
 }
 
 /* BLACK MENU LIST CACADE AREA */
@@ -197,7 +194,7 @@ nav > img {
 .heading {
     font-size : 40px;
     font-weight : bolder;
-    
+
 }
 .powered-text {
     margin-top : 15px;
@@ -237,7 +234,6 @@ button {
     width : 143px;
     margin : 0 auto;
     padding-top : 35px;
-    
 }
 i {
     border : 2px solid;
@@ -264,11 +260,11 @@ i {
     color : #a6a6a6;
 }
 .copyright > a {
-    color : #a6a6a6; 
+    color : #a6a6a6;
 }
 
 @media screen and (max-width : 1277px) {
-    
+
     .nav-small-bar, .nav-small-img {
         display : block;
     }
@@ -309,47 +305,43 @@ i {
     .blog-container {
         width : 100%;
     }
-    
+
     .content {
         width : 100%;
         display : block;
         padding : 20px;
     }
-    
+
     .sidebar {
         float : none;
         width : 87%;
         display : block;
         margin : 0 auto;
     }
-    
+
     .content .title {
     font-size : 26px;
     line-height : 43px;
     font-weight : 400;
     }
-    
+
     .black-menu-list {
         background-position : center;
         height : auto;
         padding-bottom : 30px;
     }
-    
-    .product { 
+
+    .product {
         display : block;
         width : 100%;
     }
-    
+
     .reservation-container {
         width : 100%;
     }
     .reservation-block {
         height : 480px;
     }
-    
-    
+
+
 }
-
-
-
-/*  IPHONE /6/7/8 */

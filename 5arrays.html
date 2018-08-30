@@ -49,10 +49,8 @@
           </tr>
         </thead>
         <tbody id="tbody">
-
         </tbody>
       </table>
-
       <script>
         var sourceData1 = [ {id: 1, name: "piyush"},
                             {id: 2, name: "sourabh"},
@@ -66,8 +64,6 @@
                             {id: 5, age: 24},
                             {id: 11, age: 23},
                             {id: 51, age: 24} ];
-
-
         var destinationData = [];
         for(var i = 0; i < sourceData1.length; i++) {
             for(var j=0; j < sourceData2.length; j++) {
@@ -78,9 +74,7 @@
                 }
             }
         }
-
         destinationData = destinationData.concat(sourceData2);
-
         var data= "";
         for(var i=0; i < destinationData.length; i++) {
             data+=

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>How To Use ICONS</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <style>
+            body {
+                margin: 0 auto;
+                width: 85%;
+            }
+            
+            main {
+                background-color:beige;
+                padding: 35px;
+                border:1px solid;
+                margin-bottom: 30px;
+            }
+            fieldset {
+                width:45%;
+                margin: 0 auto;
+            }
+            .form-container {
+                display: flex;
+                margin-bottom: 20px;
+            }
+            i,label {
+                border:1px solid;
+                color : gray;
+                background-color: white;
+                padding: 5px;
+                
+                height: 20px;
+                
+            }
+            input {
+                
+                height: 28px;
+                vertical-align: middle;
+                width: 100%;
+                border:1px solid gray;
+                
+                padding-left:3px;
+            }
+            
+            input[type~='submit'] {
+                background-color:red;
+                border-radius: 5px;
+                color: white;
+                font-size: 20px;
+                height: 40px;
+            }
+            
+            input[type~=submit]:hove {
+                background-color: white;
+                color:red;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h3>This is the example of How To Use Fonts</h3>
+        </header>
+        <body>
+            <main>
+                <fieldset>
+                    <legend>Registration Form</legend>
+                    <form action="https:/nowgadgets.com">
+                        <div class="form-container">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="uname"  placeholder="Enter Your User Name" />
+                        </div>
+                        
+                        <div class="form-container">
+                            <i class="fas fa-key"></i>
+                            <input type="passwod" name="pass"  placeholder="Enter Your Password" />
+                        </div>
+                        <div class="form-container">
+                            <i class="fas fa-birthday-cake"></i>
+                            <input type="date" name="date"/>
+                        </div>
+                        <div class="form-container">
+                            <input id="male" type="radio" name="gender" value="male" style="width:14px" checked>
+                            <label for="male" class="fas fa-male">Male</label>
+                            
+                            <input id="female" type="radio" name="gender" value="female" style="margin-left:20px;width:14px">
+                            <label for="female" class="fas fa-female">Female</label>
+                        </div>
+                        <div class="form-container">
+                            <i class="fas fa-envelope"></i>
+                            <input type="mail" name="email" placeholder="Enter Your Email Address">
+                        </div>
+                        <div class="form-container">
+                            <i>Age</i>
+                            <input type="range" min="10" max="60" step="1" name="age" value="22">
+                        </div>
+                        <div class="form-container">
+                            <i class="fas fa-crosshairs"></i>
+                            <input list="city" name="city">
+                                <datalist id="city">
+                                    <option value="Indore">
+                                    <option value="Bhopal">
+                                    <option value="Gwalior">
+                                    <option value="Indore">
+                                </datalist>
+                        </div>
+                        <div class="form-container">
+                            <input type="submit" value="Register">
+                        </div>
+                    </form>
+                </fieldset>
+            </main>
+        </body>
+    </body>
+</html>

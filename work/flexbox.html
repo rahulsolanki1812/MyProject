@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FlexBox</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0 auto;
+                width: 85%;
+                background-color: beige;
+            }
+            main {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 750px;
+                justify-content: center;
+                align-items: center
+                
+            }
+            main > div {
+                background-color: chocolate;
+                color: white;
+                width: 30%;
+                margin-bottom: 10px;
+                height: 300px;
+                padding: 25px;
+                font-size: 35px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>Uses Of Flexbox With Different Properties.</h2>
+        </header>
+        <main>
+            <div >
+                1
+            </div>
+            <div>
+                2
+            </div>
+            <div>
+                3
+            </div>
+            <div style="flex:30%">
+                4
+            </div>
+
+            <div style="flex:70%;display: flex;flex-flow: column wrap">
+                <p>hellow</p>
+                <p>hows u</p>
+            </div>
+        </main>
+    </body>
+</html>

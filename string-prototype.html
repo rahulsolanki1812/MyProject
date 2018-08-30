@@ -46,21 +46,21 @@
       </div>
       <script>
         String.prototype.creditFormater = function() {
-          var value = "";
-//          var temp=(this.toString().split("-")).join("");
-          var temp= this.toString().replace(/-/g,"");
-          for(var i = 1 ; i <= temp.length; i++) {
-            value += temp.charAt(i-1);
+          var filteredNo = "";
+//          var receivedNo = (this.toString().split("-")).join("");
+          var receivedNo = this.toString().replace(/-/g,"");
+          for(var i = 1 ; i <= receivedNo.length; i++) {
+            filteredNo += receivedNo.charAt(i-1);
             if(i % 4 == 0 && i < 16) {
-              value += "-";
+              filteredNo += "-";
             }
           }
-          return value;
+          return filteredNo;
         }
-        var no;
+        var cardNo;
         function checkCard() {
-          no = document.getElementById('card').value;
-          document.getElementById('card').value = no.creditFormater();
+          cardNo = document.getElementById('card').value;
+          document.getElementById('card').value = cardNo.creditFormater();
         }
 
       </script>

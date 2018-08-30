@@ -66,7 +66,7 @@
                             {id: 51, age: 24} ];
         var destinationData = [];
         for(var i = 0; i < sourceData1.length; i++) {
-            for(var j=0; j < sourceData2.length; j++) {
+            for(var j = 0; j < sourceData2.length; j++) {
                 if(sourceData1[i].id == sourceData2[j].id) {
                     destinationData.push( {id: sourceData1[i].id, name: sourceData1[i].name, age: sourceData2[j].age});
                     sourceData2.splice(j, 1);
@@ -75,16 +75,16 @@
             }
         }
         destinationData = destinationData.concat(sourceData2);
-        var data= "";
-        for(var i=0; i < destinationData.length; i++) {
-            data+=
+        var data = "";
+        for(var i = 0; i < destinationData.length; i++) {
+            data +=
               "<tr>"+
                 "<td>"+destinationData[i].id+"</td>"+
                 "<td>"+destinationData[i].name+"</td>"+
                 "<td>"+destinationData[i].age+"</td>"+
               "</tr>";
         }
-        document.getElementById('tbody').innerHTML= data;
+        document.getElementById('tbody').innerHTML = data;
       </script>
     </main>
   </body>

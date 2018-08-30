@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>String Credit Card Prototype</title>
+    <style>
+      body {
+        background-color : beige;
+        margin : 0 auto;
+        width : 85%;
+      }
+      main {
+        background-color : white;
+        padding : 25px;
+      }
+      input[type*="text"] {
+        display: block;
+        height: 35px;
+        margin : 10px auto;
+        width : 30%;
+        text-align: center;
+      }
+      button {
+        background-color : chocolate;
+        color : white;
+        display: block;
+        margin : 0 auto;
+        outline: none;
+        padding : 10px 15px;
+        width : 100px;
+      }
+      button:hover {
+        border : 1px solid;
+        border-radius : 5px;
+        box-shadow: 0px 1px 30px black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Convert Debit card number to hipen saperated.</h2>
+    </header>
+    <main>
+      <div class="form">
+        <input id="card" type="text" maxlength="19" onkeypress="checkCard()" placeholder="Enter Your Credit Card Number">
+        <button onclick="checkCard()">Check Card</button>
+      </div>
+      <script>
+        String.prototype.creditFormater = function() {
+          var value = "";
+//          var temp=(this.toString().split("-")).join("");
+          var temp= this.toString().replace(/-/g,"");
+          for(var i = 1 ; i <= temp.length; i++) {
+            value += temp.charAt(i-1);
+            if(i % 4 == 0 && i < 16) {
+              value += "-";
+            }
+          }
+          return value;
+        }
+        
+        var no;
+        
+        function checkCard() {
+          no = document.getElementById('card').value;
+          document.getElementById('card').value = no.creditFormater();
+        }
+
+      </script>
+    </main>
+  </body>
+</html>

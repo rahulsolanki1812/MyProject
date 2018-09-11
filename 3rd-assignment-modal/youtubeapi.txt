@@ -1,0 +1,19 @@
+AIzaSyCIJ1PTiC62SeDHcTHSq06RdyVoqhcsNuA
+
+
+https://www.googleapis.com/youtube/v3/search?key=AIzaSyCIJ1PTiC62SeDHcTHSq06RdyVoqhcsNuA&part=snippet&q=time&maxResults=20
+
+
+videoId
+snippet > title
+snippet > description
+
+thumbnails > default
+thumbnails > medium
+thumbnails > high
+
+https://i.ytimg.com/vi/  
+
+default.jpg
+mqdefault.jpg
+hqdefault.jpg

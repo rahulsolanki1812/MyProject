@@ -5,13 +5,13 @@ function suggestList (event) {
     var api = {
         suggestUrl : "https://suggestqueries.google.com/complete/search?client=youtube&ds=yt&q="
     };
-    var searchterm = document.getElementById('searchterm').value;
+    var searchTerm = document.getElementById('searchterm').value;
     if(event.keyCode == 13) {
         console.log("hello");
         getVideos();
     }
     else {
-        loadVideo(api.suggestUrl+ searchterm ,"suggestQuery",true);
+        loadVideo(api.suggestUrl+ searchTerm ,"suggestQuery",true);
     }
 }
 
@@ -26,8 +26,8 @@ function getVideos() {
         baseUrl : "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCIJ1PTiC62SeDHcTHSq06RdyVoqhcsNuA&part=snippet&maxResults=10",
         query : "&q="
     };
-    var searchterm = document.getElementById('searchterm').value;
-    var url = api.baseUrl + api.query + searchterm;
+    var searchTerm = document.getElementById('searchterm').value;
+    var url = api.baseUrl + api.query + searchTerm;
     loadVideo(url, "searchQuery", true);
     window.onscroll = function() {
         if(window.innerHeight + window.scrollY >= document.body.offsetHeight) {

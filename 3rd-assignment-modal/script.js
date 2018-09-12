@@ -5,7 +5,7 @@ function suggestList (event) {
     var api = {
         suggestUrl : "https://suggestqueries.google.com/complete/search?client=youtube&ds=yt&q="
     };
-    var searchTerm = document.getElementById('searchterm').value;
+    var searchTerm = document.getElementById('search-term').value;
     if(event.keyCode == 13) {
         console.log("hello");
         getVideos();
@@ -26,7 +26,7 @@ function getVideos() {
         baseUrl : "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCIJ1PTiC62SeDHcTHSq06RdyVoqhcsNuA&part=snippet&maxResults=10",
         query : "&q="
     };
-    var searchTerm = document.getElementById('searchterm').value;
+    var searchTerm = document.getElementById('search-term').value;
     var url = api.baseUrl + api.query + searchTerm;
     loadVideo(url, "searchQuery", true);
     window.onscroll = function() {

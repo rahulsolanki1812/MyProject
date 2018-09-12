@@ -18,12 +18,11 @@
         <img src="youtubelogo.png" alt="youtube logo">
       </div>
       <div class="search-box">
-        <input list="suggest" onkeyup="suggestList(event)" id="searchterm" placeholder="Search">
+        <input list="suggest" onkeyup="suggestList(event)" id="search-term" placeholder="Search">
         <datalist id="suggest"></datalist>
-        <button id="mybutton" onclick="searchList()" type="button"><i class="fas fa-search"></i></button>
+        <button onclick="searchList()" type="button"><i class="fas fa-search"></i></button>
       </div>
     </header>
-    <div id="searchterm"></div>
     <main id="video-container"></main>
     <div class="modal fade" id="video-dialog" tabindex="-1">
         <div class="modal-dialog">

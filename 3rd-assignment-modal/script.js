@@ -1,17 +1,18 @@
 var nextPageToken = null;
+var searchTerm = document.getElementById('search-term');
 
 // YOUTUBE AUTOCOMPLETE SUGGESTION LIST
 function suggestList (event) {
     var api = {
         suggestUrl : "https://suggestqueries.google.com/complete/search?client=youtube&ds=yt&q="
     };
-    var searchTerm = document.getElementById('search-term').value;
+
     if(event.keyCode == 13) {
         console.log("hello");
         getVideos();
     }
     else {
-        loadVideo(api.suggestUrl+ searchTerm ,"suggestQuery",true);
+        loadVideo(api.suggestUrl+ searchTerm.value ,"suggestQuery",true);
     }
 }
 
@@ -26,14 +27,13 @@ function getVideos() {
         baseUrl : "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCIJ1PTiC62SeDHcTHSq06RdyVoqhcsNuA&part=snippet&maxResults=10",
         query : "&q="
     };
-    var searchTerm = document.getElementById('search-term').value;
-    var url = api.baseUrl + api.query + searchTerm;
+    var url = api.baseUrl + api.query + searchTerm.value;
     loadVideo(url, "searchQuery", true);
     window.onscroll = function() {
         if(window.innerHeight + window.scrollY >= document.body.offsetHeight) {
             loadVideo(url + "&pageToken="+nextPageToken,"searchQuery",false);
         }
-    } 
+    }
 }
 
 // PLAY VIDEO BUTTON & NEW STATE LOAD
@@ -54,7 +54,7 @@ function starRate(starNo,starObj) {
         if((parentSpan.childNodes[i].getAttribute('onclick')).includes(starNo)) {
           parentSpan.childNodes[i].style.color = 'orange';
           isFound = true;
-        } 
+        }
         else if(isFound) {
             parentSpan.childNodes[i].style.color = 'black';
         }

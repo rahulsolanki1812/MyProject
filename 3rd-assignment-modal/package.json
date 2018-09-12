@@ -1,0 +1,17 @@
+{
+  "name": "3rd-assignment-modal",
+  "version": "1.0.0",
+  "description": "Youtube Assignment - playing video using bootstrap model",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rahul Singh Solanki",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "~3.3.7",
+    "fontawesome": "~5.3.1",
+    "jquery": "^3.3.1"
+  }
+}

@@ -1,115 +1,134 @@
 var nextPageToken = null;
 
-function suggestList(event) {
+// YOUTUBE AUTOCOMPLETE SUGGESTION LIST
+function suggestList (event) {
     var api = {
         suggestUrl : "https://suggestqueries.google.com/complete/search?client=youtube&ds=yt&q="
     };
     var searchterm = document.getElementById('searchterm').value;
     if(event.keyCode == 13) {
         console.log("hello");
-        searchList();
+        getVideos();
     }
     else {
-        sendHttpRequest(api.suggestUrl+ searchterm ,"suggestQuery",true);
+        loadVideo(api.suggestUrl+ searchterm ,"suggestQuery",true);
     }
 }
 
-function searchList() {
+//POP STATE EVENT TO CHAGNGE DATA
+window.addEventListener('popstate',function(event) {
+    document.getElementById('video-container').innerHTML = event.state.data;
+});
+
+
+function getVideos() {
     var api = {
         baseUrl : "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCIJ1PTiC62SeDHcTHSq06RdyVoqhcsNuA&part=snippet&maxResults=10",
         query : "&q="
     };
     var searchterm = document.getElementById('searchterm').value;
     var url = api.baseUrl + api.query + searchterm;
-    sendHttpRequest(url,"searchQuery",true);
+    loadVideo(url, "searchQuery", true);
     window.onscroll = function() {
         if(window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-            sendHttpRequest(url + "&pageToken="+nextPageToken,"searchQuery",false);
+            loadVideo(url + "&pageToken="+nextPageToken,"searchQuery",false);
         }
     } 
 }
 
+// PLAY VIDEO BUTTON & NEW STATE LOAD
 function playVideo(videoId) {
-    history.pushState({},"Playing",window.location.href+"?v="+videoId);
-
-    var videoUrl = document.getElementById('video');
-    videoUrl.src = 'https://www.youtube.com/embed/'+videoId;
+    document.getElementById('video').src = "https://www.youtube.com/embed/" + videoId;
 }
 
+// LIKE BUTTON ON VIDEO
 function like(button) {
   button.style.color = "red";
 }
 
+// STAR RATING ON VIDEO
 function starRate(starNo,starObj) {
-    var parent = starObj.parentElement;
+    var parentSpan = starObj.parentElement;
     var isFound = false;
-    for(var i = 0; i < parent.childNodes.length; i++) {
-        if((parent.childNodes[i].getAttribute('onclick')).includes(starNo)) {
-          parent.childNodes[i].style.color = 'orange';
+    for(var i = 0; i < parentSpan.childNodes.length; i++) {
+        if((parentSpan.childNodes[i].getAttribute('onclick')).includes(starNo)) {
+          parentSpan.childNodes[i].style.color = 'orange';
           isFound = true;
         } 
         else if(isFound) {
-            parent.childNodes[i].style.color = 'black';
+            parentSpan.childNodes[i].style.color = 'black';
         }
         else {
-            parent.childNodes[i].style.color = 'orange';
+            parentSpan.childNodes[i].style.color = 'orange';
         }
     }
 }
 
-function sendHttpRequest(url, type, flush) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() {
-        if(xmlHttp.readyState == 4) {
-            if(xmlHttp.status == 200) {
-                if( type == 'searchQuery') {
-                    var httpRequestObj = JSON.parse(xmlHttp.response);
-                    nextPageToken = httpRequestObj.nextPageToken;
-                    if(flush){
-                        document.getElementById('video-container').innerHTML = "";
-                    }
+// CREATE STAR RATING
+function createStar () {
+    var star = "<span><i class='fa fa-thumbs-up' onclick='like(this)'></i></span><span>";
+    for (var i = 0; i < 5; i++) {
+        star += "<span class='fa fa-star' onclick='starRate("+ i +",this)'></span>";
+    }
+    return star += "</span>";
+}
 
-                    var starRating = "<span><i class='fa fa-thumbs-up' onclick='like(this)'></i></span>";
-                    starRating += "<span>";
-                    for(var i = 0; i < 5; i++) {
-                        starRating += "<span class='fa fa-star' onclick='starRate("+ i +",this)'></span>";
+// ARTICLE CONTENT CREATOR
+function createArticleContent (img, description, title, videoId, starRating) {
+    return "<img class='thumbnail' src="+img +" alt='' />"+
+           "<h4 class='title'>"+title+"</h4>"+
+           "<p class='description'>"+ description+"</p>" +
+           "<hr/>" + starRating + "<div class='row'><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#video-dialog' onclick=playVideo('" + videoId + "')>Play Now</button></div>";
+}
+
+// LOAD VIDEO FROM URL ( AJAX CALL)
+function loadVideo(url, type, emptyContainer) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4 ) {
+// CHECK WHETHER SEARCH LIST OR SUGGEST LIST
+            if (xmlHttp.status == 200) {
+                if ( type == 'searchQuery' ) {
+                    var jsonData = JSON.parse(xmlHttp.response);
+                    nextPageToken = jsonData.nextPageToken;
+                    if (emptyContainer){
+                        document.getElementById ('video-container').innerHTML = "";
                     }
-                    starRating += "</span>";
-                    for(var i = 0; i < httpRequestObj.items.length; i++) {
-                        var img = httpRequestObj.items[i].snippet.thumbnails.medium.url;
-                        var title = (httpRequestObj.items[i].snippet.title).substr(0,58) + "...";
-                        var description = (httpRequestObj.items[i].snippet.description);
-                        var videoId = httpRequestObj.items[i].id.videoId;   
+                    for ( var i = 0; i < jsonData.items.length; i++) {
                         var article = document.createElement("article");
-                        
                         article.setAttribute("class","col-4");
-                        article.innerHTML = "<img class='thumbnail' src="+img +" alt='' />"+
-                          "<h4 class='title'>"+title+"</h4>"+
-                          "<p class='description'>"+ description+"</p>" + "<hr/>" + starRating + "<div class='row'><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#video-dialog' onclick=playVideo('" + videoId + "')>Play Now</button></div>";
+                        article.innerHTML = createArticleContent (
+                                                    jsonData.items[i].snippet.thumbnails.medium.url,
+                                                    jsonData.items[i].snippet.description,
+                                                    (jsonData.items[i].snippet.title).substr(0,58) + "...",
+                                                    jsonData.items[i].id.videoId,
+                                                    createStar ()
+                        );
                         document.getElementById('video-container').append(article);
                     }
+                    var state = {data :""+document.getElementById('video-container').innerHTML};
+                    history.replaceState ( state, "YouTube", "./");
                 }
-                else if( type == 'suggestQuery' ) {
+                else if ( type == 'suggestQuery' ) {
                     var res = xmlHttp.response;
-                    res = JSON.parse(res.substring(res.indexOf('['),res.lastIndexOf(']')+1));
                     var displaySuggest = document.getElementById('suggest');
                     suggest.innerHTML = "";
-                    for(var i = 0; i < res[1].length; i++) {
+                    res = JSON.parse(res.substring(res.indexOf('['),res.lastIndexOf(']')+1));
+                    for (var i = 0; i < res[1].length; i++) {
                         var opt = document.createElement('option');
-                        opt.setAttribute('value',((""+res[1][i][0]).split()).join('+'));
-                        opt.append(document.createTextNode(res[1][i][0]));
-                        displaySuggest.appendChild(opt);
+                        opt.setAttribute ( 'value',(( ""+res[1][i][0]).split()).join('+'));
+                        opt.append (document.createTextNode (res[1][i][0]));
+                        displaySuggest.appendChild (opt);
                     }
                 }
             }
             else if(xmlHttp.status == 400) {
-                alert('not found');
             }
             else {
-                alert('something went wrong');
+                console.log(xmlHttp);
             }
         }
     }
-  xmlHttp.open("GET",url,true);
-  xmlHttp.send();
+    xmlHttp.open("GET",url,true);
+    xmlHttp.send();
 }

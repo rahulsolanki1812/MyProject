@@ -1,0 +1,58 @@
+body {
+  border: 1px solid;
+  border-radius: 15px;
+  padding-top: 10px; }
+
+.jumbotron {
+  background-color: #3c763d;
+  color: white;
+  margin-bottom: 0;
+  overflow: auto;
+  text-align: center; }
+  .jumbotron .pagination-icon {
+    line-height: 65px; }
+  .jumbotron .nextButton {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: 30px;
+    padding-top: 20px; }
+
+main {
+  margin: 0 auto;
+  width: 85%; }
+  main #current {
+    background-color: rgba(35, 0, 214, 0.66);
+    border-radius: 3%;
+    color: white; }
+  main .days li, main .dates li {
+    border: 1px solid #00000014;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    margin: 5px auto 5px auto;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    width: 14.28%; }
+  main li:nth-child(7n) {
+    background-color: #5cb85c;
+    color: #ffffff;
+    font-weight: bolder; }
+  main li:nth-child(7n+1) {
+    background-color: #d9534f;
+    color: #ffffff;
+    font-weight: bolder; }
+  main .days {
+    list-style-type: none;
+    padding: 0; }
+  main .dates {
+    list-style-type: none;
+    padding: 0; }
+    main .dates li {
+      box-shadow: 0 0 0; }
+      main .dates li:hover {
+        border: 1px solid #000000;
+        box-shadow: 0 0 0; }
+
+/*# sourceMappingURL=style.css.map */

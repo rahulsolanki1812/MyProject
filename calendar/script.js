@@ -9,9 +9,8 @@ var _firstSelectedDate = null;
 function dateSelector(lastSelectedDate) {
     if (_firstSelectedDate === null) {
         _firstSelectedDate = lastSelectedDate;
-        var li = document.querySelector('li[onclick="dateSelector('+ lastSelectedDate +')"]');
-        li.style.backgroundColor = "#0011ff80";
-        li.style.color = "#ffffff";
+        var intermediateDate = document.querySelector('li[onclick="dateSelector('+ lastSelectedDate +')"]');
+        intermediateDate.setAttribute('class','selected');
     }
     else {
         var myBtn = document.getElementById('myBtn');
@@ -19,15 +18,15 @@ function dateSelector(lastSelectedDate) {
 
         if (_firstSelectedDate < lastSelectedDate) {
             for (var i = _firstSelectedDate; i <= lastSelectedDate; i++) {
-                var li = document.querySelector('li[onclick="dateSelector('+ i +')"]');
-                li.setAttribute('class','selected');
-                modalContent.push(li.firstChild.nodeValue);
+                var intermediateDate = document.querySelector('li[onclick="dateSelector('+ i +')"]');
+                intermediateDate.setAttribute('class','selected');
+                modalContent.push(intermediateDate.firstChild.nodeValue);
             }
         } else {
             for (var i = lastSelectedDate; i <= _firstSelectedDate; i++) {
-                var li = document.querySelector('li[onclick="dateSelector('+ i +')"]');
-                li.setAttribute('class','selected');
-                modalContent.push(li.firstChild.nodeValue);
+                var intermediateDate = document.querySelector('li[onclick="dateSelector('+ i +')"]');
+                intermediateDate.setAttribute('class','selected');
+                modalContent.push(intermediateDate.firstChild.nodeValue);
             }
         }
         myBtn.click();
@@ -55,6 +54,7 @@ function onModalClose() {
 
         if (message != "") {
             selectedDates.lastChild.setAttribute('class','event-box');
+            selectedDates.lastChild.setAttribute('title',message);
         }
     }
 };
@@ -80,29 +80,26 @@ function previousMonthDates(date) {
 }
 
 //Get last date of given date object
-function getLastDateOfMonth(currentMonth) {
+function getMonthLastDate(currentMonth) {
     return new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 0).getDate();
 }
 
-function createCalendar(subDate) {
+function createCalendar(receivedDate) {
     var today = new Date();
 
-    if (subDate === undefined) {
-        subDate = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+    if (receivedDate === undefined) {
+        receivedDate = new Date(today.getFullYear(), today.getMonth() + 1, 0);
     }
 
-    var monthStartDate = new Date(subDate.setDate(1));
+    var monthStartDate = new Date(receivedDate.setDate(1));
     var lastMonthDates = previousMonthDates(monthStartDate);
     var dateContainer = document.querySelector('.dates');
-    var endingDate = getLastDateOfMonth(subDate);
+    var endingDate = getMonthLastDate(receivedDate);
     var currentMonthDates = (monthStartDate.getDay() + endingDate);
     dateContainer.innerHTML = "";
 
     // Print calender according to day on 1st of month
     for(var i = 0; i < currentMonthDates; i++ ) {
-        var date = document.createElement('li');
-        var eventBox = document.createElement('div');
-
         if( i < monthStartDate.getDay()) {
             dateContainer.innerHTML += "<li class='disabled'>" + lastMonthDates + "</li>";
             lastMonthDates++;
@@ -110,12 +107,12 @@ function createCalendar(subDate) {
             dateContainer.innerHTML += "<li onclick='dateSelector(" + monthStartDate.getDate() + ")'>" + monthStartDate.getDate() + "<div></div></li>";
             if(i == currentMonthDates-1) {
                 var currentMonthDates = (6 - monthStartDate.getDay());
-                for( var j = 0; j < currentMonthDates; j++) {
-                    monthStartDate.setDate(monthStartDate.getDate() + 1);
-                    dateContainer.innerHTML += "<li class='disabled'>"+ monthStartDate.getDate() +"</li>";
+                for( var j = 1; j <= currentMonthDates; j++) {
+                    dateContainer.innerHTML += "<li class='disabled'>"+ j +"</li>";
                 }
-                monthStartDate.setMonth(monthStartDate.getMonth()-1);
+                monthStartDate.setDate(monthStartDate.getDate() - 1);
             }
+
             monthStartDate.setDate(monthStartDate.getDate()+1);
         }
     }
@@ -135,7 +132,6 @@ function createCalendar(subDate) {
 }
 
 function generateDaysAndYear() {
-
     var days = document.querySelector('.days');
     for(var i = 0; i < 7; i++ ) {
         days.innerHTML += "<li>" + calendar.weekdays[i] + "</li>";

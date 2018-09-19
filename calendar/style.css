@@ -11,24 +11,32 @@ body {
   text-align: center; }
   .jumbotron .pagination-icon {
     line-height: 65px; }
-  .jumbotron .nextButton {
+  .jumbotron #year {
+    background-color: rgba(0, 0, 0, 0.01);
+    border: 0;
+    font-size: 25px;
+    outline: 0;
+    width: 88px; }
+  .jumbotron .monthNavigationBtn {
     background-color: rgba(0, 0, 0, 0);
     border: 0;
     font-size: 30px;
+    outline: 0;
     padding-top: 20px; }
 
 main {
   margin: 0 auto;
   width: 85%; }
-  main #current {
-    background-color: rgba(35, 0, 214, 0.66);
+  main .current {
+    border: 1px solid #000000;
     border-radius: 3%;
-    color: white; }
+    color: #2300d6;
+    font-size: 19px;
+    font-weight: bolder; }
   main .days li, main .dates li {
     border: 1px solid #00000014;
     display: inline-block;
     height: 50px;
-    line-height: 50px;
     margin: 5px auto 5px auto;
     overflow: hidden;
     text-align: center;
@@ -36,23 +44,44 @@ main {
     vertical-align: middle;
     width: 14.28%; }
   main li:nth-child(7n) {
-    background-color: #5cb85c;
-    color: #ffffff;
+    color: #5cb85c;
+    font-size: 16px;
     font-weight: bolder; }
   main li:nth-child(7n+1) {
-    background-color: #d9534f;
-    color: #ffffff;
+    color: #d9534f;
+    font-size: 16px;
     font-weight: bolder; }
   main .days {
+    box-shadow: 0 1px 0.6px;
     list-style-type: none;
     padding: 0; }
+    main .days li {
+      line-height: 50px; }
+  main .disabled:nth-child(n) {
+    border: 0;
+    color: #a2a2a2;
+    font-size: 12px; }
+  main .disabled:nth-child(n):hover {
+    border: 0;
+    cursor: default; }
   main .dates {
     list-style-type: none;
     padding: 0; }
     main .dates li {
-      box-shadow: 0 0 0; }
+      box-shadow: 0 0 0;
+      line-height: 30px; }
+      main .dates li .event-box {
+        background-color: red;
+        color: white;
+        height: 20px;
+        line-height: 18px;
+        padding: 0 5%; }
       main .dates li:hover {
         border: 1px solid #000000;
-        box-shadow: 0 0 0; }
+        box-shadow: 0 0 0;
+        cursor: pointer; }
+  main .selected:nth-child(n) {
+    background-color: #0011ff80;
+    color: #ffffff; }
 
 /*# sourceMappingURL=style.css.map */

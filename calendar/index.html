@@ -8,16 +8,20 @@
 </head>
 <body class="container">
     <section class="jumbotron">
-        <div class="col-xs-1">
-            <button type="button" class="nextButton" onclick="getPreviousMonthData()"><span class="pagination-icon glyphicon glyphicon-chevron-left"></span> </button>
-        </div>
-        <div class="col-xs-10">
-            <header>
-                <h1><span id="month-name"></span><span id="year"></span></h1>
-            </header>
-        </div>
-        <div class="col-xs-1">
-            <button type="button" class="nextButton" onclick="getNextMonthData()"><span class="pagination-icon glyphicon glyphicon-chevron-right"></span> </button>
+        <div class="row">
+            <div class="col-sm-1">
+                <button type="button" class="monthNavigationBtn" onclick="getPreviousMonth()"><span class="pagination-icon glyphicon glyphicon-chevron-left"></span> </button>
+            </div>
+            <div class="col-sm-10">
+                <header>
+                    <span class="h1" id="month-name"></span>
+                    <br/>
+                    <select id="year"></select>
+                </header>
+            </div>
+            <div class="col-sm-1">
+                <button type="button" class="monthNavigationBtn" onclick="getNextMonth()"><span class="pagination-icon glyphicon glyphicon-chevron-right"></span> </button>
+            </div>
         </div>
     </section>
     <main>
@@ -26,6 +30,25 @@
         <ul class="dates">
         </ul>
     </main>
+    <div id="myBtn" data-target="#myModal" data-toggle="modal"></div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" onclick="onModalClose()"  type="button" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">You have selected</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="selected-content"></p>
+                    <input type="text" placeholder="Enter Your Text To display on Event Box">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="onModalClose()" type="button" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
     <script src="script.js" type="text/javascript"></script>

@@ -15,10 +15,19 @@ body {
         line-height: 65px;
     }
 
-    .nextButton {
+    #year {
+        background-color: rgba(0,0,0,0.01);
+        border: 0;
+        font-size: 25px;
+        outline: 0;
+        width: 88px;
+    }
+
+    .monthNavigationBtn {
         background-color: rgba(0, 0, 0, 0);
         border: 0;
         font-size: 30px;
+        outline: 0;
         padding-top: 20px;
     }
 }
@@ -27,17 +36,18 @@ main {
     margin: 0 auto;
     width: 85%;
 
-    #current {
-        background-color: rgba(35, 0, 214, 0.66);
+    .current {
+        border: 1px solid #000000;
         border-radius: 3%;
-        color: white;
+        color: rgb(35, 0, 214);
+        font-size: 19px;
+        font-weight: bolder;
     }
 
     %li-style {
         border: 1px solid #00000014;
         display: inline-block;
         height: 50px;
-        line-height: 50px;
         margin: 5px auto 5px auto;
         overflow: hidden;
         text-align: center;
@@ -45,24 +55,41 @@ main {
         vertical-align: middle;
         width: 14.28%;
     }
+
     li:nth-child(7n) {
-        background-color: #5cb85c;
-        color: #ffffff;
-        font-weight: bolder;
-    }
-    li:nth-child(7n+1) {
-        background-color: #d9534f;
-        color: #ffffff;
+        color: #5cb85c;
+        font-size: 16px;
         font-weight: bolder;
     }
 
+    li:nth-child(7n+1) {
+        color: #d9534f;
+        font-size: 16px;
+        font-weight: bolder;
+    }
+
+
+
     .days {
+        box-shadow: 0 1px 0.6px;
         list-style-type: none;
         padding: 0;
 
         li {
             @extend %li-style;
+            line-height: 50px;
         }
+    }
+
+    .disabled:nth-child(n) {
+        border: 0;
+        color: #a2a2a2;
+        font-size: 12px;
+    }
+
+    .disabled:nth-child(n):hover {
+        border: 0;
+        cursor: default;
     }
 
     .dates {
@@ -72,11 +99,27 @@ main {
         li {
             @extend %li-style;
             box-shadow: 0 0 0;
+            line-height: 30px;
+
+            .event-box {
+                background-color : red;
+                color: white;
+                height: 20px;
+                line-height: 18px;
+                padding: 0 5%;
+            }
 
             &:hover {
                 border: 1px solid #000000;
                 box-shadow: 0 0 0;
+                cursor: pointer;
             }
         }
     }
+    .selected:nth-child(n) {
+        background-color: #0011ff80;
+        color: #ffffff;
+    }
 }
+
+// @media only screen (max-width: )
